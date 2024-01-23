@@ -18,10 +18,12 @@ import {
     async addUser (
       @Body('name') name: string,
       @Body('email') email: string,
+      @Body('password') password: string,
     ) {
       const user = await this.UsersService.signup(
         name,
         email,
+        password
       );
       return user;
     }

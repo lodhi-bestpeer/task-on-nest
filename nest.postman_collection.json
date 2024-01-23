@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \n}",
+							"raw": "{\n    \"name\":\"sourabh\",\n    \"email\":\"lodhi@bestpeers.com\",\n    \"password\": \"12345\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,14 +24,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/signUp",
+							"raw": "http://localhost:3000/users/signup",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"signUp"
+								"users",
+								"signup"
 							]
 						}
 					},
