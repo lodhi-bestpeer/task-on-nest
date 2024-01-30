@@ -41,7 +41,6 @@ export class PostsService {
 
  }
  
- 
  async getLikes (postId : string) {
   const post = await this.model.findById(postId);
   return{like:  post.likes.length}

@@ -14,6 +14,7 @@ import {
   export class UsersController {
     constructor(private readonly UsersService: UsersService) {}
   
+
     @Post("/signup")
     async addUser (
       @Body('name') name: string,
@@ -22,6 +23,19 @@ import {
     ) {
       const user = await this.UsersService.signup(
         name,
+        email,
+        password
+      );
+      return user;
+    }
+
+
+    @Post("/login")
+    async login (
+      @Body('email') email: string,
+      @Body('password') password: string,
+    ) {
+      const user = await this.UsersService.login(
         email,
         password
       );
